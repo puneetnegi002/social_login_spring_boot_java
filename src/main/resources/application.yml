@@ -1,0 +1,88 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /dms-dev
+
+
+
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 17783295487-61irp0bamoi641p07n9mrjq3cdfg9f8t.apps.googleusercontent.com
+            client-secret: D-Ptd9vQfurJ3XEYO4P1tokr
+            scope: profile email
+            redirectUriTemplate: "{baseUrl}/auth/{registrationId}"
+          facebook:
+            clientId: 660696421097213
+            clientSecret: af6a93fe8a938f3303898ffa0ba11452
+            redirectUriTemplate: "{baseUrl}/auth/{registrationId}"
+            scope:
+            - email
+            - public_profile
+          github:
+            clientId: 230cfe8d1d1339d69f01
+            clientSecret: 349d8caf429840029af66ddd382cb5f82536f2c9
+            redirectUriTemplate: "{baseUrl}/auth/{registrationId}"
+            scope:
+            - user:email
+            - read:user
+
+twitter:
+  client:
+    clientId: "YPONJT8MJB9CnDooBLrw0xi6H"
+    clientSecret: "WROqWXJrBaGZ1moj3ApzDP5N1ojTHsNivd12o5HztpLXyox0lI"
+    emailRequestUri: "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true"
+    redirectUri: "http://dms-dev.com:8080/authorize/twitter"
+
+instagram:
+  client:
+    clientId: 7f09dd87e6ab4f23b8533a3b9021dacb
+    clientSecret: 224554df216e4ce19671a88c0517fa6f
+    accessTokenUri: https://api.instagram.com/oauth/access_token
+    userAuthorizationUri: https://api.instagram.com/oauth/authorize
+    pre-established-redirect-uri: http://dms-dev.com:8080/authorize/instagram
+    clientAuthenticationScheme: form
+    authentication-scheme: query
+  resource:
+    userInfoUri: https://api.instagram.com/v1/users/self
+
+
+facebook:
+  client:
+    clientId: 660696421097213
+    clientSecret: af6a93fe8a938f3303898ffa0ba11452
+    accessTokenUri: https://graph.facebook.com/oauth/access_token
+    userAuthorizationUri: https://www.facebook.com/dialog/oauth
+    tokenName: oauth_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://graph.facebook.com/me
+google:
+  client:
+    clientId: 17783295487-61irp0bamoi641p07n9mrjq3cdfg9f8t.apps.googleusercontent.com
+    clientSecret: D-Ptd9vQfurJ3XEYO4P1tokr
+    accessTokenUri: https://accounts.google.com/o/oauth2/token
+    userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+    clientAuthenticationScheme: form
+    scope: profile email
+  resource:
+    userInfoUri:  https://www.googleapis.com/oauth2/v3/userinfo
+#linkedIn:
+ # client:
+#    clientId: 771mrzk94hye1w
+ #   clientSecret: iIJFgBf9lCb18zYe
+ #   accessTokenUri: https://www.linkedin.com/oauth/v2/accessToken
+  #  userAuthorizationUri: https://www.linkedin.com/oauth/v2/authorization
+ # resource:
+  #  userInfoUri: https://api.linkedin.com/v1/people/~?format=json
+
+
+mongodb:
+  uri: mongodb://localhost:27017/login
+  database: login
+

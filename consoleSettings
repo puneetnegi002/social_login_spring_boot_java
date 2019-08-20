@@ -1,0 +1,56 @@
+github :-
+   Log on to https://github.com/settings/applications/new
+  fill ->
+     Application name              -- demo
+     Homepage URL                  -- http://demo.com:8080/
+     Authorization callback URL    -- http://demo.com:8080/auth/github
+
+
+facebook :-
+   Log on to https://developers.facebook.com/
+  click on my apps option, type your app name and create app
+  next, choose integrate facebook login and confirm
+  On right side menu choose settings->basic settings, fill ->
+  app domains -> decipherzone.com (for localhost type localhost)
+  under facebook integration choose settings ->
+  fill ->
+       Valid OAuth Redirect URIs  :- https://decipherzone.com/auth/facebook
+       (for localhost keep the field blank)
+
+google :-
+    Log on to https://console.developers.google.com
+   create new project and fill your project name
+   On right side menu choose credentials
+   ->on Oauth consent screen tab , fill application name  and domain name and select scope -email, profile, openid
+     (for localhost type localhost)
+   ->on credentials tab, crete new credentials,
+     -> choose oauth clientid
+     ->choose web application as application type
+     ->authorized urls -> https://decipherzone.com/auth/google
+        (for localhost -> http://localhost:8080/auth/google)
+
+
+twitter : -
+    Log on to https://developer.twitter.com/en/apps
+     create new app
+     fill the application name, and website name eg.- https://decipherzone.com
+
+     (for localhost change the name of localhost like -> dzone.com and fill http://dzone.com:8080/ )
+
+      fill the callback url, https://decipherzone.com/authorize/twitter
+
+      and tick the check box for enable social login
+
+      in permission tab, for requesting email of twitter users,
+       fill the privacy url and service url in application settings
+
+       get the consumer key and xonsumer secret.
+
+Instagram :-
+   Log on to https://www.instagram.com/developer/
+   Click on Manage Clients, then register new client
+   Insert ->
+      Application Name: Test App
+      Description: ------
+      Website Url : http://localhost:8080/
+      Valid redirect URIs : http://localhost:8080/authorize/instagram
