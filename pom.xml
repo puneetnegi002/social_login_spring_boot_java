@@ -81,15 +81,15 @@
             <version>2.9.8</version>
         </dependency>
 
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-instagram</artifactId>
             <version>1.0.0.BUILD-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 
-    <repositories>
+  <!--  <repositories>
         <repository>
             <id>org.springframework.maven.release</id>
             <name>Spring Maven Release Repository</name>
@@ -97,7 +97,7 @@
             <releases><enabled>true</enabled></releases>
             <snapshots><enabled>false</enabled></snapshots>
         </repository>
-    </repositories>
+    </repositories>-->
     <build>
         <plugins>
             <plugin>
