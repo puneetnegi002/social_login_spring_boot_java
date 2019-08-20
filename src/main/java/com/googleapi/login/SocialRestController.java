@@ -53,7 +53,7 @@ public class SocialRestController {
   @GetMapping(value = "/authorize/instagram")
   public void authh(HttpServletResponse response,HttpServletRequest request,@RequestParam("code") String a) throws IOException {
 
-    System.out.println("lkh");
+   /* System.out.println("lkh");*/
     System.out.println(a);
   }
 
