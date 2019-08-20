@@ -60,7 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .requestCache(new NullRequestCache())
             .and()
             .authorizeRequests()
-            .antMatchers("/**", "/login-v1/connect/*", "/login-v1/**")
+            .antMatchers("/**", "/login-v1/connect/*", "/login-v1/**", "/demo")
             .permitAll()
             .and()
             .authorizeRequests()
